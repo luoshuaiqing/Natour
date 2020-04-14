@@ -28,7 +28,8 @@ $mysqli->close();
 
     <link rel="stylesheet" href="css/icon-font.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <script src="js/app.js"></script>
+    
 
 
     <title>Natours | Exciting tours for adventurous people</title>
