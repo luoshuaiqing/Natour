@@ -1,6 +1,6 @@
 <?php 
-	define("DB_HOST","localhost");
-	define("DB_USER","luoshuaiqing");
-	define("DB_PASS","luoshuaiqing");
-    define("DB_NAME","natour");
+	define("DB_HOST","");
+	define("DB_USER","");
+	define("DB_PASS","");
+	define("DB_NAME","");
 ?>
