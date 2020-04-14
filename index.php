@@ -1,3 +1,22 @@
+<?php
+require "config/config.php";
+
+$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+if($mysqli->connect_errno) {
+    echo $mysqli->connect_error;
+    exit();
+}
+
+$sqlReviews = "SELECT * FROM reviews";
+$reviews = $mysqli->query($sqlReviews);
+if ( !$reviews ) {
+	echo $mysqli->error;
+	exit();
+}
+
+$mysqli->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -265,27 +284,30 @@
                 </h2>
             </div>
 
+
+            <?php while($review = $reviews->fetch_assoc()): ?>
             <div class="row">
                 <div class="story">
                     <figure class="story__shape">
-                        <img src="img/nat-8.jpg" alt="Person on a tour" class="story__img">
+                        <img src="<?php echo $review['img_url']; ?>" alt="Person on a tour" class="story__img">
                         <figcaption class="story__caption">
-                            Mary Smith
+                            <?php echo $review['username']; ?>
                         </figcaption>
                     </figure>
 
                     <div class="story__text">
                         <h3 class="heading-tertiary u-margin-bottom-small">
-                            I had the best week ever with my familiy
+                            <?php echo $review['review_title']; ?>
                         </h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus blanditiis rem. Lorem ipsum dolor sit amet consectetur adipisicing eli
+                            <?php echo $review['review']; ?>
                         </p>
                     </div>
                 </div>
             </div>
+            <?php endwhile; ?>
 
-            <div class="row">
+            <!-- <div class="row">
                 <div class="story">
                     <figure class="story__shape">
                         <img src="img/nat-9.jpg" alt="Person on a tour" class="story__img">
@@ -303,7 +325,7 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="u-center-text u-margin-top-huge">
                 <a href="#" class="btn-text">Read all stories &rarr;</a>
