@@ -1,14 +1,14 @@
 {
-  "name": "natours",
-  "version": "1.0.0",
-  "description": "landing page for natours",
-  "main": "index.php",
-  "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css"
-  },
-  "author": "Your Name",
-  "license": "ISC",
-  "devDependencies": {
-    "node-sass": "^4.13.0"
+    "name": "natours",
+    "version": "1.0.0",
+    "description": "landing page for natours",
+    "main": "index.php",
+    "scripts": {
+      "compile:sass": "node-sass sass/main.scss css/style.css"
+    },
+    "author": "Your Name",
+    "license": "ISC",
+    "devDependencies": {
+      "node-sass": "^4.13.0"
+    }
   }
-}
