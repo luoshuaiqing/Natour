@@ -1,6 +1,6 @@
 <?php 
-	define("DB_HOST","localhost");
-	define("DB_USER","luoshuaiqing");
-	define("DB_PASS","luoshuaiqing");
-	define("DB_NAME","natour");
+	define("DB_HOST","460.itpwebdev.com");
+	define("DB_USER","bo_natour_user");
+	define("DB_PASS","itp460natour");
+	define("DB_NAME","bo_natour_user");
 ?>
